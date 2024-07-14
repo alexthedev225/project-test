@@ -23,7 +23,7 @@ interface BlogDetailProps {
 
 const fetchPost = async (slug: string): Promise<Post> => {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-  const res = await fetch(`${baseUrl}/api/recipes/${slug}`);
+  const res = await fetch(`https://project-test-kappa-tan.vercel.app/api/recipes/${slug}`);
   if (!res.ok) {
     throw new Error(`Failed to fetch data: ${res.statusText}`);
   }
